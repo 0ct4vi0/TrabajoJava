@@ -45,7 +45,7 @@ public class Main {
 //          }else {
 //              System.out.print(" el numero "+num1+" es mayor");
 //          }
-
+//-------------------------------------------------------------
 //  5)  int num;
 //      System.out.print(" ingrese un numero que quiera saber si es divisible por 2: ");
 //      num = sc.nextInt();
@@ -54,21 +54,29 @@ public class Main {
 //      }else{
 //          System.out.println(" el numero ingresado no es divisible por 2");
 //      }
-//  6)  int precio;
+// ----------------------------------------------
+//  6)
+//      int precio;
 //      System.out.print("Ingrese el precio del producto: ");
 //      precio = sc.nextInt();
 //      double precioFinal = precio + (precio * 1.21);
 //      System.out.println("El precio final con IVA es: " + precioFinal);
-
-//  7)      int i = 1;
+//---------------------------------------------------------
+//  7)
+//          int i = 1;
 //          while (i <= 100) {
 //          System.out.println(i);
 //          i++;
 //          }
-//  8)      for (int i = 1; i <= 100; i++) {
+//  ------------------------------------------------
+//  8)
+//          for (int i = 1; i <= 100; i++) {
 //              System.out.println(i);
 //          }
-//  9)    int i = 1;
+//
+// -------------------------------------------------
+// 9)
+//        int i = 1;
 //        while (i <= 100) {
 //            if (i % 3 == 0){
 //                if (i % 2 ==0) {
@@ -77,54 +85,44 @@ public class Main {
 //            }
 //            i++;
 //        }
-//    10)     int numero;
-//            System.out.print("Ingrese un número mayor o igual a cero: ");
-//            numero = sc.nextInt();
-//            if (numero < 0){
-//                do {
-//                    System.out.println("El número ingresado es negativo. Inténtelo de nuevo.");
-//                    System.out.print("Ingrese un número mayor o igual a cero: ");
-//                    numero = sc.nextInt();
-//                    if (numero>=0){
-//                        System.out.println("El número ingresado: "+numero+" es mayor o igual a 0 ");
-//                    }
-//                } while (numero <0);
-//            }else if (numero>=0){
-//            System.out.println("El número ingresado: "+numero+" es mayor o igual a 0 ");
-    //        }
-
-//  11)   String contrasenaIngresada;
-//        String CONTRASENA_CORRECTA;
-//        int intentosMaximos = 3;
-//        int intentosRestantes = intentosMaximos;
-////        creo la primera contraseña
-//        System.out.print("Cree la contraseña: ");
-//        contrasenaIngresada = sc.nextLine();
-////        ingreso de seguridad
-//        System.out.print("Ingrese la contraseña: ");
-//        CONTRASENA_CORRECTA= sc.nextLine();
-//        if (contrasenaIngresada.equals(CONTRASENA_CORRECTA)) {
-//            System.out.println("Acceso Correcto");
-//            System.out.println("Bienvenido Usuario");
-//        } else if (contrasenaIngresada != CONTRASENA_CORRECTA) {
+//------------------------------------------------
+//  10)
+//            int numero;
 //            do {
-//                if (intentosRestantes > 0) {
-//                    System.out.println("Contraseña incorrecta. Intentos restantes: " + intentosRestantes);
-//                    System.out.println("Escriba nuevamente la contraseña: ");
-//                    CONTRASENA_CORRECTA = sc.nextLine();
-//                        if (contrasenaIngresada.equals(CONTRASENA_CORRECTA)) {
-//                            System.out.println("Acceso Correcto");
-////                         break;
-//                        }
-//                }else {
-//                    System.out.println("Número máximo de intentos alcanzado. Acceso denegado.");
+//                System.out.print("Ingrese un número mayor o igual a cero: ");
+//                numero = sc.nextInt();
+//                if (numero < 0){
+//                    System.out.println("El número ingresado es negativo. Inténtelo de nuevo.");
+//                }else if (numero>=0) {
+//                    System.out.println("El número ingresado: " + numero + " es mayor o igual a 0 ");
 //                    break;
 //                }
-//                intentosRestantes--;
-//            }while (contrasenaIngresada != CONTRASENA_CORRECTA);
+//            } while (numero < 0);
+//--------------------------------------------------------
+//  11)
+//        String contrasenaIngresada;
+//        String CONTRASENA_CORRECTA = "mariaines09";
+//        int intentos=0;
+////        inicio el bucle
+//        while(true) {
+//                System.out.print("Ingrese la contraseña: ");
+//                contrasenaIngresada = sc.nextLine();
+//                intentos++;
+//                if (contrasenaIngresada.equals(CONTRASENA_CORRECTA)) {
+//                    System.out.println("Acceso Correcto");
+//                    System.out.println("Bienvenido Usuario");
+//                    break;
+//                }else {
+//                    if (intentos==3) {
+//                        System.out.println("Número máximo de intentos alcanzado. Acceso denegado.");
+//                        break;
+//                    }
+//                    System.out.println("La contraseña es incorrecta.Acceso denegado");
+//                }
 //        }
 //-----------------------------------------------------------------------------------------
-//  12)   int dia;
+//  12)
+//        int dia;
 //        do {
 //            System.out.print("Ingrese el número del día de la semana (1 para lunes, 7 para domingo): ");
 //            dia = sc.nextInt();
@@ -147,38 +145,44 @@ public class Main {
 //                System.out.println("No es un día laboral.");
 //        }
 // ---------------------------------------------------------------------------------------
-//  13)   int numero;
+//  13)
+//        int numero;
+//        int i;
+//        int contador=0;
 //        System.out.print("Ingrese un número para verificar si es primo: ");
 //        numero = sc.nextInt();
 //        // Verificar si el número es menor o igual que 1
-//        if (numero <= 1) {
-//            System.out.println(numero + " no es un número primo.");
-//        } else {
-//            if (numero % 2 == 0) {
-//                System.out.println(numero + " es un número primo.");
-//            } else {
-//                System.out.println(numero + " no es un número primo.");
+//        for (i=1;i<=numero;i++){
+//            int aux= numero%i;
+//            if (aux == 0) {
+//                contador = contador + 1;
 //            }
 //        }
+//        if (contador<=2){
+//            System.out.println("tu numero es primo");
+//        }else {
+//            System.out.println("tu numero no es primo");
+//        }
 // -----------------------------------------------------------------------------------------
-        int numAleeatorio = (int)(Math.random() * 100);
-        int intentoUsuario;
-        int intentos = 0;
-        System.out.println("¡Bienvenido a las adivinanzas!");
-        System.out.println("En que numero abre pensado? ");
-        do {
-            System.out.print("Ingresa tu intento: ");
-            intentoUsuario = sc.nextInt();
-            intentos++;
-            if (intentoUsuario < numAleeatorio) {
-                System.out.println("El número es mayor.");
-            } else if (intentoUsuario > numAleeatorio) {
-                System.out.println("El número es menor.");
-            } else {
-                System.out.println("¡Felicidades! Has adivinado el número.");
-                System.out.println("Número de intentos: " + intentos);
-            }
-        } while (intentoUsuario != numAleeatorio);
+//  14)
+//        int numAleeatorio = (int)(Math.random() * 100);
+//        int intentoUsuario;
+//        int intentos = 0;
+//        System.out.println("¡Bienvenido a las adivinanzas!");
+//        System.out.println("En que numero abre pensado? ");
+//        do {
+//            System.out.print("Ingresa tu intento: ");
+//            intentoUsuario = sc.nextInt();
+//            intentos++;
+//            if (intentoUsuario < numAleeatorio) {
+//                System.out.println("El número es mayor.");
+//            } else if (intentoUsuario > numAleeatorio) {
+//                System.out.println("El número es menor.");
+//            } else {
+//                System.out.println("¡Felicidades! Has adivinado el número.");
+//                System.out.println("Número de intentos: " + intentos);
+//            }
+//        } while (intentoUsuario != numAleeatorio);
 
     }
 }
